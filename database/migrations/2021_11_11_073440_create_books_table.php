@@ -24,7 +24,7 @@ class CreateBooksTable extends Migration
             ->on('authors')->onUpdate('cascade')
             ->onDelete('cascade');
 
-            $table->timestamps();
+            $table->timetamps();
         });
     }
 
