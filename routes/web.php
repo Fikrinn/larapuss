@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthorController;
+use App\Http\Controllers\BookController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,3 +41,6 @@ Route::group(['prefix' => 'user', 'middleware' => ['auth']],
     });
 
 Route::resource('author', AuthorController::class);
+
+Route::resource('books', BookController::class);
+

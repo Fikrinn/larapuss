@@ -19,12 +19,11 @@ class CreateBooksTable extends Migration
             $table->bigInteger('author_id')->unsigned();
             $table->integer('amount')->unsigned();
             $table->string('cover')->nullable();
-
-            $table->foreign('author_id')->references('id')
-            ->on('authors')->onUpdate('cascade')
-            ->onDelete('cascade');
-
-            $table->timetamps();
+            // f  k author_id
+            $table->foreign("author_id")->references('id')
+                ->on('authors')->onUpdate('cascade')
+                ->onDelete('cascade');
+            $table->timestamps();
         });
     }
 
